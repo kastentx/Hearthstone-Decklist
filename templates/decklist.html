@@ -1,0 +1,11 @@
+{% if decklist %}
+	<ul>
+	{% for deck in decklist %}
+		<li>{{ deck.name }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>
+	You haven't added any decks yet!
+	</p>	
+{% endif %}

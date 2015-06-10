@@ -13,9 +13,9 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import patterns, include, url
-import decklist
+from django.conf.urls import patterns, url
+from decklist import views
 
 urlpatterns = patterns('',
-	url(r'^decks/', include('decklist.urls'))
+	url(r'^$', views.deck_list, name = 'decklist')
 	)
