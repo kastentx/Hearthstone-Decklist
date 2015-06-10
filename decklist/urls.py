@@ -17,5 +17,6 @@ from django.conf.urls import patterns, url
 from decklist import views
 
 urlpatterns = patterns('',
-	url(r'^$', views.deck_list, name = 'decklist')
+	url(r'^$', views.deck_list, name = 'decklist'),
+	url(r'^(?P<deck_id>\d+)/$', views.deck, name = 'deck'),
 	)
