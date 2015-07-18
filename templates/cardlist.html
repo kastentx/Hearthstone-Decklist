@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}The Decks{% endblock %}
+{% block title %}The Cards{% endblock %}
 
 {% block content %}
-	{% if decklist %}
+	{% if cardlist %}
 		<ul>
-		{% for deck in decklist %}
+		{% for deck in cardlist %}
 			<li><a href="/decks/{{ deck.id }}/">{{ deck.name }}</a></li>
 		{% endfor %}
 		</ul>
 	{% else %}
 		<p>
-		You haven't added any decks yet!
+		You haven't added any cards yet!
 		</p>	
 	{% endif %}
 	<p>
-	To see a list of cards click <a href="/cards/">here</a>.
+	To see a list of decks click <a href="../">here</a>.
 	</p>
 {% endblock %}

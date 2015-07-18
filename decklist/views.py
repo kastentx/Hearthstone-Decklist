@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from decklist.models import Deck
+from decklist.models import Deck, Card
 
 def deck_list(request):
 	decklist = Deck.objects.all()
@@ -13,3 +13,8 @@ def deck(request, deck_id):
 		raise Http404
 	context = {'deck' : deck}
 	return render(request, 'deck.html', context)
+
+def card_list(request):
+	cardlist = Card.objects.all()
+	context = {'cardlist' : cardlist}
+	return render(request, 'cardlist.html', context)

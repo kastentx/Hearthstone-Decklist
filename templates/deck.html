@@ -1,11 +1,12 @@
-<html>
-	<head>
-		<title>{{ deck.name }}</title>
-	</head>
-	<body>
-		Name: {{ deck.name }} <br>
-		Created: {{ deck.created }} <br>
-		Wins: {{ deck.wins }} <br>
-		Losses: {{ deck.losses }} <br>						
-	</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}{{ deck.name }}{% endblock %}
+
+{% block content %}
+<ul>
+	<li>Name: {{ deck.name }}</li>
+	<li>Created: {{ deck.created }}</li>
+	<li>Wins: {{ deck.wins }}</li>
+	<li>Losses: {{ deck.losses }}</li>
+</ul>
+{% endblock %}

@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""decklist app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -18,5 +18,7 @@ from decklist import views
 
 urlpatterns = patterns('',
 	url(r'^$', views.deck_list, name = 'decklist'),
-	url(r'^(?P<deck_id>\d+)/$', views.deck, name = 'deck'),
+	url(r'^decks/(?P<deck_id>\d+)/$', views.deck, name = 'deck'),
+    url(r'^cards/', views.card_list, name = 'cardlist'),
+    #url(r'^cards/(?P<card_id>\d+)/$', views.card, name = 'card')
 	)
